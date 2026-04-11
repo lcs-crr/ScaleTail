@@ -153,6 +153,7 @@ A huge thank you to all our contributors! ScaleTail wouldn’t be what it is tod
 | 📝 **Nanote**        | A lightweight, self-hosted note-taking app with Markdown support.                                                                                                          | [Details](services/nanote)        |
 | ☁️ **NextCloud**     | A suite of client-server software for creating and using file hosting services.                                                                                            | [Details](services/nextcloud)     |
 | 🔗 **Pingvin Share** | **PROJECT ARCHIVED** A self-hosted file sharing platform.                                                                                                                  | [Details](services/pingvin-share) |
+| 📅 **Radicale**      | A lightweight CalDAV and CardDAV server for self-hosted calendar, to-do, and contact sync.                                                                                | [Details](services/radicale)      |
 | 🔄 **Resilio Sync**  | A fast, reliable, and simple file sync and share solution.                                                                                                                 | [Details](services/resilio-sync)  |
 | 🗂️ **Stirling-PDF**  | A web application for managing and editing PDF files.                                                                                                                      | [Details](services/stirlingpdf)   |
 | 📄 **BentoPDF**      | A lightweight, self-hosted web app for viewing and managing PDF documents.                                                                                                 | [Details](services/bentopdf)      |
@@ -176,6 +177,7 @@ A huge thank you to all our contributors! ScaleTail wouldn’t be what it is tod
 | 🖥️ **Changedetection.io** | A tool for monitoring website changes.                                                                 | [Details](services/changedetection) |
 | 🛠️ **Coder**              | Self-hosted cloud dev environments with browser IDEs, Terraform-managed workspaces.                    | [Details](services/coder)           |
 | 🔧 **Cyberchef**          | A web app for encryption, encoding, compression, and data analysis.                                    | [Details](services/cyberchef)       |
+| 🐳 **Dockge**             | A fancy, easy-to-use and reactive self-hosted Docker Compose stack manager.                            | [Details](services/dockge)          |
 | 🐳 **Dockhand**           | A modern, lightweight Docker management UI for containers and Compose stacks.                          | [Details](services/dockhand)        |
 | 🖥️ **Dozzle**             | A real-time log viewer for Docker containers.                                                          | [Details](services/dozzle)          |
 | 🔁 **FossFLOW**           | A self-hosted tool to make beautiful isometric infrastructure diagrams.                                | [Details](services/fossflow)        |

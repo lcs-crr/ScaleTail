@@ -5,7 +5,7 @@
 [![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff)](https://www.docker.com/)
 [![Tailscale](https://img.shields.io/badge/Tailscale-cccccc?logo=tailscale&logoColor=fff)](https://tailscale.com/)
 
-ScaleTail provides ready-to-run [Docker Compose](https://docs.docker.com/compose) stacks that instantly connect your self-hosted applications to your [Tailnet](https://tailscale.com/docs/concepts/tailnet). By using a sidecar configuration, your applications get an [URL](https://grokipedia.com/page/URL) with automatic [HTTPS](https://grokipedia.com/page/HTTPS), for example: `https://application.tail-net.ts.net`.
+ScaleTail provides ready-to-run [Docker Compose](https://docs.docker.com/compose) stacks that instantly connect your self-hosted applications to your [Tailnet](https://tailscale.com/docs/concepts/tailnet). By using a Docker sidecar configuration, your applications get an [URL](https://grokipedia.com/page/URL) with automatic [HTTPS](https://grokipedia.com/page/HTTPS), for example: `https://application.tail-net.ts.net`.
 
 ## Featured by Tailscale
 
@@ -22,20 +22,20 @@ ScaleTail provides ready-to-run [Docker Compose](https://docs.docker.com/compose
    Go to the [Tailscale Admin Console → Keys](https://login.tailscale.com/admin/settings/keys) and generate a new auth key.
 
 2. **Clone and Choose a Service**
-  
+
    Clone the repository and change directory to your desired service with the following command:
 
    ``` bash
    git clone https://github.com/tailscale-dev/ScaleTail.git
    cd ScaleTail/services/YourDesiredService 
    ```
-  
+
 3. **Configure and Launch**
 
    - Open the `.env` file in your chosen service directory.
    - Add your auth key after the line `TS_AUTHKEY=`.
    - Start the Docker compose stack:
-  
+
    ``` bash
    docker compose up -d
    ```
@@ -145,7 +145,6 @@ ScaleTail provides ready-to-run [Docker Compose](https://docs.docker.com/compose
 | 📥 **Mattermost**    | A self-hosted collaborative workflow and communication tool.                                                                                                               | [Details](services/mattermost)    |
 | 📝 **Memos**         | A lightweight, self-hosted note-taking and knowledge management platform for capturing ideas, daily notes, and personal knowledge.                                         | [Details](services/memos)         |
 | 📝 **Nanote**        | A lightweight, self-hosted note-taking app with Markdown support.                                                                                                          | [Details](services/nanote)        |
-| ☁️ **NextCloud**     | A suite of client-server software for creating and using file hosting services.                                                                                            | [Details](services/nextcloud)     |
 | 🤖 **Open WebUI**    | A self-hosted AI platform with a ChatGPT-style interface for local and cloud-based models.                                                                                 | [Details](services/open-webui)    |
 | 🔗 **Pingvin Share** | **PROJECT ARCHIVED** A self-hosted file sharing platform.                                                                                                                  | [Details](services/pingvin-share) |
 | 📅 **Radicale**      | A lightweight CalDAV and CardDAV server for self-hosted calendar, to-do, and contact sync.                                                                                | [Details](services/radicale)      |
@@ -157,6 +156,7 @@ ScaleTail provides ready-to-run [Docker Compose](https://docs.docker.com/compose
 | 🗃️ **Vaultwarden**   | An unofficial Bitwarden server implementation written in Rust.                                                                                                             | [Details](services/vaultwarden)   |
 | ✅ **Vikunja**       | A self-hosted task and project management platform with projects, reminders, labels, recurring tasks, and collaboration features.                                          | [Details](services/vikunja)       |
 | 💸 **Wallos**        | An open-source, self-hostable web app to track and manage your recurring subscriptions and expenses, with multi-currency support, customizable categories, and statistics. | [Details](services/wallos)        |
+| 📚 **XWiki**         |XWiki offers a generic platform for developing projects and collaborative applications using the wiki paradigm.|[Details](services/xwiki)|
 
 ### 📊 Dashboards and Visualization
 
@@ -174,6 +174,7 @@ ScaleTail provides ready-to-run [Docker Compose](https://docs.docker.com/compose
 | 🛠️ **Coder**              | Self-hosted cloud dev environments with browser IDEs, Terraform-managed workspaces.                         | [Details](services/coder)           |
 | 🔧 **Cyberchef**          | A web app for encryption, encoding, compression, and data analysis.                                         | [Details](services/cyberchef)       |
 | 🐳 **Dockhand**           | A modern, lightweight Docker management UI for containers and Compose stacks.                               | [Details](services/dockhand)        |
+| 🐳 **Dockge**             | A lightweight, self-hosted Docker Compose stack manager with a clean web UI.                               | [Details](services/dockge)          |
 | 🖥️ **Dozzle**             | A real-time log viewer for Docker containers.                                                               | [Details](services/dozzle)          |
 | 🔁 **FossFLOW**           | A self-hosted tool to make beautiful isometric infrastructure diagrams.                                     | [Details](services/fossflow)        |
 | 🖥️ **GitSave**            | A self-hosted service to back up your GitHub repositories via a simple REST API and scheduled runs.         | [Details](services/gitsave)         |
@@ -203,16 +204,17 @@ ScaleTail provides ready-to-run [Docker Compose](https://docs.docker.com/compose
 
 ### 📱 Utilities
 
-| 📱 Service        | 📝 Description                                                                          | 🔗 Link                          |
-| ---------------- | -------------------------------------------------------------------------------------- | ------------------------------- |
-| 🔁 **ConvertX**   | A fast, full-featured self-hosted conversion API for images, docs, videos, and more.   | [Details](services/convertx)    |
-| 🔔 **Gotify**     | A simple server for sending and receiving messages in real-time.                       | [Details](services/gotify)      |
-| 📣 **ntfy**       | A simple HTTP-based pub/sub notification service for sending push notifications.       | [Details](services/ntfy)        |
-| 🚗 **LubeLogger** | Self-hosted vehicle maintenance tracker with private access.                           | [Details](services/lube-logger) |
-| 🚗 **Tracktor**   | Self-hosted vehicle maintenance tracker.                                               | [Details](services/tracktor)    |
-| 📱 **Mini-QR**    | A minimal, self-hosted QR code generator with a mobile-friendly UI.                    | [Details](services/miniqr)      |
-| 🔐 **Hemmelig**   | A self-hosted, zero-knowledge encrypted secret sharing platform with expiring secrets. | [Details](services/hemmelig)    |
-| 📦 **Homebox**    | A self-hosted home inventory and asset management system.                              | [Details](services/homebox)     |
+| 📱 Service        | 📝 Description                                                                                                     | 🔗 Link                          |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| 🔁 **ConvertX**   | A fast, full-featured self-hosted conversion API for images, docs, videos, and more.                              | [Details](services/convertx)    |
+| 🔔 **Gotify**     | A simple server for sending and receiving messages in real-time.                                                  | [Details](services/gotify)      |
+| 🔐 **Hemmelig**   | A self-hosted, zero-knowledge encrypted secret sharing platform with expiring secrets.                            | [Details](services/hemmelig)    |
+| 📦 **Homebox**    | A self-hosted home inventory and asset management system.                                                         | [Details](services/homebox)     |
+| 🚗 **LubeLogger** | Self-hosted vehicle maintenance tracker with private access.                                                      | [Details](services/lube-logger) |
+| 📱 **Mini-QR**    | A minimal, self-hosted QR code generator with a mobile-friendly UI.                                               | [Details](services/miniqr)      |
+| 📣 **ntfy**       | A simple HTTP-based pub/sub notification service for sending push notifications.                                  | [Details](services/ntfy)        |
+| 🚗 **Tracktor**   | Self-hosted vehicle maintenance tracker.                                                                          | [Details](services/tracktor)    |
+| 🔁 **Transmute**  | A self-hosted file conversion and transformation service for handling documents, media, and other format changes. | [Details](services/transmute)   |
 
 ### 🍽️ Food & Wellness
 
@@ -229,7 +231,7 @@ Tailscale Funnel securely exposes services to the public internet. Tailscale Ser
 
 ### Tailscale Funnel
 
-[Tailscale Funnel](https://tailscale.com/kb/1223/funnel) is a feature that lets you route traffic from the wider internet to a local service running on a machine in your Tailscale network (known as a Tailnet). You can think of this as publicly sharing a local service, like a web app, for anyone to access—even if they don’t have Tailscale themselves.
+[Tailscale Funnel](https://tailscale.com/kb/1223/funnel) is a feature that lets you route traffic from the internet to a local service running on a machine in your Tailscale network (known as a Tailnet). You can think of this as publicly sharing a local service, like a web app, for anyone to access—even if they don’t have Tailscale themselves.
 
 ![Tailscale Funnel](images/tailscale-funnel.png)
 
@@ -270,17 +272,17 @@ A huge thank you to all our contributors! ScaleTail wouldn’t be what it is tod
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/ChillBill77">
-                    <img src="https://avatars.githubusercontent.com/u/129118422?v=4" width="100;" alt="ChillBill77"/>
-                    <br />
-                    <sub><b>ChillBill77</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/michaelhodges">
                     <img src="https://avatars.githubusercontent.com/u/3329567?v=4" width="100;" alt="michaelhodges"/>
                     <br />
                     <sub><b>michaelhodges</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/ChillBill77">
+                    <img src="https://avatars.githubusercontent.com/u/129118422?v=4" width="100;" alt="ChillBill77"/>
+                    <br />
+                    <sub><b>ChillBill77</b></sub>
                 </a>
             </td>
             <td align="center">

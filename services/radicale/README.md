@@ -33,6 +33,7 @@ Radicale uses `htpasswd` for authentication. To set up users:
 1. **Create the required directories:**
 
    ```bash
+   set -a && source .env && set +a
    mkdir -p ./${SERVICE}-data/config
    ```
 
@@ -48,7 +49,12 @@ Radicale uses `htpasswd` for authentication. To set up users:
    htpasswd -B ./${SERVICE}-data/users <username>
    ```
 
-3. **Fill out config file** at `./${SERVICE}-data/config/radicale.conf`:
+3. **Fill out config file**:
+
+   ```bash
+   nano ./${SERVICE}-data/config/radicale.conf
+   ```
+   With:
 
    ```ini
    [auth]

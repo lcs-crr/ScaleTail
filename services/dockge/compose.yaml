@@ -60,7 +60,7 @@ services:
     volumes:
       - ./${SERVICE}-data/app/config:/app/data
       - /var/run/docker.sock:/var/run/docker.sock
-      - ${STACKS_DIR}:${STACKS_DIR}
+      - ${STACKS_DIR}:/stacks
     depends_on:
       tailscale:
         condition: service_healthy

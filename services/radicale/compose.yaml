@@ -56,7 +56,7 @@ services:
       - TAKE_FILE_OWNERSHIP=true
     volumes:
       - ./${SERVICE}-data/app/data:/data
-      - ./config/${SERVICE}.conf:/config/radicale.conf
+      - ./${SERVICE}-data/config/radicale.conf:/config/radicale.conf
       - ./${SERVICE}-data/users:/config/users
     command: ["/venv/bin/radicale", "--config", "/config/radicale.conf"]
     depends_on:
